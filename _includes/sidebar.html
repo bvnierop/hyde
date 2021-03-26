@@ -23,11 +23,12 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-      <a class="sidebar-nav-item" target="_blank" href="{{ site.author.github }}">GitHub</a>
-      <a class="sidebar-nav-item" target="_blank" href="{{ site.author.linkedin }}">LinkedIn</a>
-      <a class="sidebar-nav-item" target="_blank" href="{{ site.author.stackoverflow }}">StackOverflow</a>
+
+      {% for link in site.external_links %}
+        <a class="sidebar-nav-item" target="_blank" href="{{ link.external_link }}">{{ link.title }}</a>
+      {% endfor %}
     </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }} Bart van Nierop. All rights reserved.</p>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. All rights reserved.</p>
   </div>
 </div>

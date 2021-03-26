@@ -18,6 +18,9 @@ author:
   url:            https://twitter.com/mdo
   picture:        'img/logo.png'
 
+collections:
+  - external_links
+
 paginate:         5
 
 # Custom vars
