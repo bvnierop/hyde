@@ -2,7 +2,7 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="{{ "/" | relative_url }}">
-        <img src="{{ "/assets/img/photo.jpeg" | relative_url}}" class="photo"/>
+        <img src="{{ "/assets/" | append: site.author.picture | relative_url}}" class="photo"/>
       </a>
       <p class="lead">{{ site.description }}</p>
     </div>

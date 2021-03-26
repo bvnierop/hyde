@@ -16,6 +16,7 @@ baseurl:          /
 author:
   name:           'Mark Otto'
   url:            https://twitter.com/mdo
+  picture:        'img/logo.png'
 
 paginate:         5
 
