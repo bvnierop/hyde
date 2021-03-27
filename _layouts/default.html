@@ -12,4 +12,8 @@
     </div>
 
   </body>
+
+  {% if site.analytics.goat_counter %}
+  <script data-goatcounter="{{ "https://" | append: site.analytics.goat_counter | append: ".goatcounter.com/count" }}" async src="//gc.zgo.at/count.js"></script>
+  {% endif %}
 </html>
