@@ -1,19 +1,4 @@
 ---
-layout: page
+layout: tags
 title: Tags
 ---
-
-<div id="tags">
-  {% for tag in site.tags %}
-  {% capture tag_name %}{{ tag | first }}{% endcapture %}
-  <div id="#{{ tag_name }}">
-    <a name="{{ tag_name }}"></a>
-    <h2>{{ tag_name }}</h2>
-    {% for post in site.tags[tag_name] %}
-    <div>
-      {{ post.date | date_to_string }}..........<a href="{{ post.url }}">{{ post.title }}</a>
-    </div>
-    {% endfor %}
-  </div>
-{% endfor %}
-</div>
