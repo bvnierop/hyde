@@ -4,9 +4,10 @@ title: Tags
 ---
 
 <div id="tags">
-{% for tag in site.tags %}
-  <div id="tag">
-    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+  {% for tag in site.tags %}
+  {% capture tag_name %}{{ tag | first }}{% endcapture %}
+  <div id="#{{ tag_name }}">
+    <a name="{{ tag_name }}"></a>
     <h2>{{ tag_name }}</h2>
     {% for post in site.tags[tag_name] %}
     <div>

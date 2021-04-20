@@ -8,6 +8,10 @@
 <span class="post-date">
   &#x1F5D3; {{ date | date_to_string }}
   {% if tags.size > 0 %}
-  &#x1f3f7; {{ tags | join: ', ' }}
+    {% for tag in tags %}
+      {% if forloop.first %}&#x1f3f7;{% endif %}
+      <a href="/tags/#{{ tag }}">{{ tag }}</a>
+      {% unless forloop.last %}| {% endunless %}
+    {% endfor %}
   {% endif %}
 </span>
